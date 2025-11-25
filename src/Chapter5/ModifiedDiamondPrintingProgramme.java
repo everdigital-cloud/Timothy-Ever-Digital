@@ -1,8 +1,21 @@
 package Chapter5;
-
-public class DiamondPrinting {
+import java.util.Scanner;
+public class ModifiedDiamondPrintingProgramme {
     public static void main(String[] args) {
-        int numberOfMiddleLine = 9;
+
+
+        //(Modified Diamond Printing Program) Modify the application you wrote in Exercise 5.24
+        // to read an odd number in the range 1 to 19 to specify the number of rows in the diamond. Your
+        // program should then display a diamond of the appropriate size.
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter an odd number between 1 to 19:");
+        int number = input.nextInt();
+        while (number%2==0||number>19) {
+            System.err.println("Enter an odd number between 1 to 19:");
+             number = input.nextInt();
+        }
+
+        int numberOfMiddleLine = number;
         int halfOfMiddleLine = numberOfMiddleLine / 2;
         for (int row = 0; row <= halfOfMiddleLine; row++) {
             int spaces = halfOfMiddleLine - row;
@@ -29,8 +42,3 @@ public class DiamondPrinting {
         }
     }
 }
-
-
-
-
-

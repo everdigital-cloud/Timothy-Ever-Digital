@@ -2,9 +2,11 @@ package Others;
 
 public class Test {
     public static void main(String[] args) {
-        for(int counter=1; counter<=10; counter++){
-            System.out.printf("%d   ", counter);
-        }
-        System.out.println();
+
+        double amountInDouble=10.99;
+        int  amountInInteger=(int)(amountInDouble*100+0.5);
+        int dollar=amountInInteger/100;
+        int cents=amountInInteger%100;
+        System.out.printf("%d:%02d",dollar, cents);
     }
 }

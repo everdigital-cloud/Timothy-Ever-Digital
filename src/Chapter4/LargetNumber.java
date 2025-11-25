@@ -36,7 +36,6 @@ public class LargetNumber {
             }
             counter++;
         }
-
             System.out.printf("The largest number is: %d", largestNumber);
         }
 

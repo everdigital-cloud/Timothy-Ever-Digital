@@ -29,13 +29,13 @@ public class TheFairTax {
         int  amountInInteger=(int)(totalExpenses*100+0.5);
         int dollar=amountInInteger/100;
         int cents=amountInInteger%100;
-        System.out.printf("%d:%02d",dollar, cents);
+        System.out.printf("The total expenses is $%d:%02d%n",dollar, cents);
 
         double fairTax=23*(totalExpenses/100);
         int  taxInInteger=(int)(fairTax*100+0.5);
         int taxdollar=taxInInteger/100;
         int taxcents=taxInInteger%100;
-        System.out.printf("%d:%02d",taxdollar, taxcents);
+        System.out.printf("Fair tax is $%d:%02d%n",taxdollar, taxcents);
 
 
     }

@@ -21,6 +21,8 @@ public class RoundingNumbers2 {
     public static double roundToHundreds(double number){
         return Math.floor(number*100+0.5)/100;
     }
+
+
     public static double roundToThousands(double number){
         return Math.floor(number*1000+0.5)/1000;
     }

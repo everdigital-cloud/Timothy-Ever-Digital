@@ -16,11 +16,11 @@ culation
          */
 
         Scanner input=new Scanner(System.in);
-        System.out.println("Enter a Celsius or Kelvin temperature: ");
+        System.out.println("Enter a Celsius temperature: ");
         int temperature=input.nextInt();
 
-        System.out.println(kelvin(temperature)+ "`K");
-        System.out.println(celsius(temperature)+"`C");
+        System.out.println(temperature+"`C = "+ kelvin(temperature)+ "`K");
+        //System.out.println(celsius(temperature)+"`C");
     }
     private static double kelvin(int temperature){
         double kelvin=temperature+273.15;

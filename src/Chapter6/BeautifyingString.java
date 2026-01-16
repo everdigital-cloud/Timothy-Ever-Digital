@@ -13,19 +13,27 @@ public class BeautifyingString {
  the end, and a capitalized first letter. Make sure you output the string after it has been
  beautified!
  */
-        Scanner input=new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String stringSample = input.next();
-        putFullStop(stringSample);
-
-
+        System.out.println(beautifyString(stringSample));
     }
-        
-private static void putFullStop(String stringSample) {
-if(stringSample.endsWith(".") == false) {
-    System.out.println(stringSample+".");
-}else {
-    System.out.println(stringSample);
- }
-}
+
+    public static String putFullStop(String stringSample) {
+
+        if (stringSample.endsWith(".") == false) {
+            stringSample=stringSample+".";
+        } else {
+            return stringSample;
+        }
+        return stringSample;
+    }
+    public static String capitalize( String stringSample){
+        String capitalizedWord=stringSample.substring(0,1).toUpperCase()+stringSample.substring(1);
+        return capitalizedWord;
+    }
+
+    private static String beautifyString(String stringSample){
+        return capitalize(putFullStop(stringSample));
+    }
 }

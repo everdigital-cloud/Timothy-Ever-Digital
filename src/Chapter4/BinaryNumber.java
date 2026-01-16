@@ -33,7 +33,8 @@ public class BinaryNumber {
         }
 
 
-            int decimal = 0, power = 1;
+            int decimal = 0;
+        int power = 1;
             while (binary > 0) {
                 int lastDigit = binary % 10;
                 decimal += lastDigit*power;

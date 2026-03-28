@@ -1,4 +1,5 @@
 package Chapter7;
+import java.util.Arrays;
 import java.util.Scanner;
 public class AirlineReservationsSystem {
     public static void main(String[] args) {
@@ -21,17 +22,71 @@ section (and vice versa). If yes, make the appropriate seat assignment. If no, d
 "Next flight leaves in 3 hours."
          */
         System.out.println("********* AIRLINE RESERVATIONS SYSTEM*********");
-        System.out.println("Please type 1 for first class");
-        System.out.println("Please type 2 for Economy");
-        Scanner input=new Scanner(System.in);
-        int [] choice= new int[10];
-        int seat= input.nextInt();
 
-    }
-    public static void firstClass(){
-        System.out.println("A");
-    }
-    public static void economy(){
-        System.out.println("B");
+        Scanner input = new Scanner(System.in);
+
+        int[] seat = new int[10];
+        int economyPosition = 1;
+        int firstClassPosition = 1;
+            for (int counter = 0; counter < seat.length/2; counter++) {
+
+                System.out.println("Please type 1 for first class");
+                System.out.println("Please type 2 for Economy");
+                int choice = input.nextInt();
+                if (choice == 1) {
+                    System.out.println("...SEAT NUMBER " + (firstClassPosition) + "...");
+                    System.out.println("...FIRST CLASS SECTION..." + "\n");
+                    firstClassPosition++;
+//                    if (firstClassPosition>=6){
+//                        break;
+//                    }
+                } else if (choice == 2) {
+                    System.out.println("...SEAT NUMBER " + (economyPosition) + "...");
+                    System.out.println("...ECONOMY SECTION..." + "\n");
+                    economyPosition++;
+                    if (economyPosition>=6){
+                        break;
+                    }
+
+                } else {
+                    System.out.println("Wrong Option");
+                }
+
+                while (economyPosition > seat.length / 2) {
+                    System.out.println("Economy section is full, will you go for first class section? type 1 for yes or 2 for no");
+                    int secondChoice1 = input.nextInt();
+                    if (secondChoice1 == 2) {
+                        System.out.println("Next flight leaves in 3 hours.");
+                    } else {
+                        // if (firstClassPosition < 5) {
+                        System.out.println("...SEAT NUMBER " + (firstClassPosition) + "...");
+                        System.out.println("...FIRST CLASS SECTION..." + "\n");
+                        firstClassPosition++;
+                        if (firstClassPosition > 6) {
+                            break;
+                        }
+                    }
+                }
+
+                while (firstClassPosition > seat.length / 2) {
+                    System.out.println("First Class section is full, will you go for economy section? type 1 for yes or 2 for no");
+                    int secondChoice2 = input.nextInt();
+                    if (secondChoice2 == 2) {
+                        System.out.println("Next flight leaves in 3 hours.");
+                    } else {
+                        // if (economyPosition < 5) {
+                        System.out.println("...SEAT NUMBER " + (economyPosition) + "...");
+                        System.out.println("...ECONOMY SECTION..." + "\n");
+                        economyPosition++;
+                        if (economyPosition > 5) {
+                            break;
+                        }
+
+
+                    }
+                }
+
+            }
+        System.out.println("No more space!");
     }
 }

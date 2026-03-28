@@ -110,7 +110,7 @@ string to display.
          int sum = die1 + die2; // sum of die values
 
               // display results of this roll
-        waiting();
+      //  waiting();
          System.out.printf("Player rolled %d + %d = %d%n", die1, die2, sum);
         return sum;
     }

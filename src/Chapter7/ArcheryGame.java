@@ -30,7 +30,7 @@ scores between 0 and 10 for each player chance.
                 }
             }
 
-        System.out.prinf("%-20s%-10s%-10s%-10s", "Score1","Score2","Score3","Total");
+        System.out.println("          Score1\tScore2\tScore3\tTotal");
         int winner=0;
         int maximumScore=0;
         for (int row=0;row<scores.length;row++){

@@ -1,6 +1,6 @@
 package Chapter7;
 import java.security.SecureRandom;
-public class DiceRolling {
+public class DiceRolling2 {
     public static void main(String[] args) {
 
         /*
@@ -12,16 +12,19 @@ least frequent. Figure 7.28 shows the 36 possible combinations of the two dice. 
 should roll the dice 36,000,000 times. Use a one-dimensional array to tally the number of times
 each possible sum appears. Display the results in tabular format.
          */
-        int[] rollDice=new int[6];
-        for (int counter=0;counter<rollDice.length;counter++){
-            System.out.println(rowDice());
-        }
-
-    }
-    public static int rowDice(){
         SecureRandom random=new SecureRandom();
-        int die1=1+ random.nextInt(6);
-        int die2=1+ random.nextInt(6);
-        return die1+die2;
+        int total;
+        int[] frequency=new int[13];
+        for (int counter=0;counter<=36_000_000;counter++){
+            int firstDie=1+random.nextInt(6);
+            int secondDie=1+random.nextInt(6);
+            total=firstDie+secondDie;
+            frequency[total]++;
+
+        }
+        System.out.println("Sum"+"\t"+"frequency");
+        for (int counter=2;counter<frequency.length;counter++){
+            System.out.println(counter+"\t"+frequency[counter]);
+        }
     }
 }

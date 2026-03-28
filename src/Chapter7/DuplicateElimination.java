@@ -1,5 +1,7 @@
 package Chapter7;
 import java.util.Scanner;
+import java.util.Arrays;
+import java.security.SecureRandom;
 public class DuplicateElimination {
     public static void main(String[] args) {
         /*
@@ -11,15 +13,31 @@ duplicate elements from the array containing the numbers you input. Display the 
 array to demonstrate that the duplicate input values were actually removed. [Note: do not display
 the array elements where the value is -1.]
          */
-        int[]numbers=new int[10];
-        Scanner input=new Scanner(System.in);
-        for (int row=0;row<numbers.length;row++){
-            numbers[row]=input.nextInt();
 
+
+        Scanner input=new Scanner(System.in);
+        SecureRandom random=new SecureRandom();
+
+        int[]array1=new int[200];
+        Arrays.fill(array1, -1);
+
+        System.out.println("Enter 5 integers: ");
+        for (int row=1;row<array1.length;row++){
+            array1[row]= 10+random.nextInt(91);
         }
-        for (int number : numbers) {
-            System.out.print(number + " ");
+        for (int row=0;row<array1.length;row++){
+
+            if (row%10==0){
+                System.out.println();
+            }
+            if (array1[row]==array1[row+1]){
+                System.out.print("-1  ");
+            }else {
+                System.out.print(array1[row]+"  ");
+            }
+
         }
 
     }
+
 }

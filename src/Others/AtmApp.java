@@ -1,5 +1,6 @@
 package Others;
 import java.util.Scanner;
+
 //💳 Java Exercise: Build a Simple ATM App
 //🎯 Objective
 //Create a console-based ATM simulation that lets users perform simple banking actions using loops and conditionals.
@@ -20,7 +21,17 @@ import java.util.Scanner;
 public class AtmApp {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
+        String accountName="Awe";
+        String accountNumber="0000000000";
+        String password="000000000";
 
 
+
+
+
+        double balance=0.00;
+        ATM account1=new ATM(accountName,accountNumber,balance,password);
+account1.menu();
     }
+
 }

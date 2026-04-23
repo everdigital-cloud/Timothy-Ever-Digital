@@ -1,7 +1,5 @@
 package Chapter3;
 
-import java.sql.SQLOutput;
-
 public class HealthProfile {
     private String firstName;
     private String lastName;

@@ -6,6 +6,14 @@ public class Knights_Tour {
         knightMovement();
     }
     private static void knightMovement() {
+        Scanner input=new Scanner(System.in);
+        System.out.println("WELCOME TO KNIGHTS TOUR");
+        System.out.println("Enter your name: ");
+        String name=input.next();
+        char knightName=name.charAt(0);
+        System.out.println("The first letter of our name represent your name");
+
+
         int knightRow = 4;
         int knightColumn = 4;
         for (int counter=0;counter<64;counter++) {
@@ -38,7 +46,7 @@ public class Knights_Tour {
             for (int row = 0; row < knight.length; row++) {
                 for (int column = 0; column < knight[row].length; column++) {
                     if (row == knightRow && column == knightColumn) {
-                        System.out.print(" k ");
+                        System.out.print(" "+knightName+" ");
                     } else if (knight[row][column] == 0) {
                         System.out.print(" , ");
                     } else {
@@ -49,7 +57,7 @@ public class Knights_Tour {
             }
 
             System.out.print("Make a move: ");
-            Scanner input = new Scanner(System.in);
+            //Scanner input = new Scanner(System.in);
             int move = input.nextInt();
              switch (move){
                  case 1:knightRow=knightRow-1;knightColumn=knightColumn+2;break;

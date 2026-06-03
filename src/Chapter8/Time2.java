@@ -93,5 +93,24 @@ public class Time2 {
                 ((getHour() == 0 || getHour() == 12) ? 12 : getHour() % 12),
                 getMinute(), getSecond(), (getHour() < 12 ? "AM" : "PM"));
     }
+    public void tick() throws InterruptedException {
+            Thread.sleep(1000);
+            second++;
+            if (second==60){
+                minute++;
+                second=0;
+            }
+
+            if (minute==60){
+                hour++;
+                minute=0;
+            }
+
+            if (hour==24){
+
+                hour=0;
+                System.out.println("Next Day");
+            }
+    }
 
 }

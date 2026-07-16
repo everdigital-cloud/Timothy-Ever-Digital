@@ -4,6 +4,6 @@ public abstract class TwoDimensionalShape extends Shape{
     public TwoDimensionalShape(String shapeName){
         super(shapeName);
     }
-    public abstract double area();
+    public abstract double getArea();
 
 }

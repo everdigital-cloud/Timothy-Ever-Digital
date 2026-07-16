@@ -8,5 +8,11 @@ public class ShapeTest {
         System.out.println(circle);
         Triangle triangle=new Triangle("Triangle", 5, 6);
         System.out.println(triangle);
+        Cube cube=new Cube("Cube", 6);
+        System.out.println(cube);
+        Tetrahedron tetrahedron=new Tetrahedron("Tetrahedron",6);
+        System.out.println(tetrahedron);
+
+        Shape[] shapes=new Shape[]
     }
 }

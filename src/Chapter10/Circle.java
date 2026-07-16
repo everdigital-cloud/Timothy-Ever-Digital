@@ -22,12 +22,12 @@ public class Circle extends TwoDimensionalShape {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return Math.PI*(Math.pow(getRadius(), 2));
     }
 
     @Override
     public String toString() {
-        return String.format("%s%s: %.2f%n%s: %.2f%n", super.toString(),"Length: ", getRadius(),"Area " ,area());
+        return String.format("%s%s: %.2f%n%s: %.2f%n", super.toString(),"Length: ", getRadius(),"Area " , getArea());
     }
 }

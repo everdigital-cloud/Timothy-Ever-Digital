@@ -22,17 +22,17 @@ public class Sphere extends ThreeDimensionalShape {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return 4*Math.PI*(Math.pow(getRadius(),2));
     }
 
     @Override
-    public double volume() {
+    public double getVolume() {
         return (4.0/3)*Math.PI*(Math.pow(getRadius(), 3));
     }
 
     @Override
     public String toString() {
-        return String.format("%s%n%s: %.2f%n%s: %.2f%n%s: %.2f", super.toString(), "Radius", getRadius(), "Area", area(), "Volume", volume());
+        return String.format("%s%n%s: %.2f%n%s: %.2f%n%s: %.2f", super.toString(), "Radius", getRadius(), "Area", getArea(), "Volume", getVolume());
     }
 }

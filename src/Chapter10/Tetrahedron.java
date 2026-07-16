@@ -1,8 +1,8 @@
 package Chapter10;
 
-public class Cube extends ThreeDimensionalShape{
+public class Tetrahedron extends ThreeDimensionalShape{
     private double length;
-    public Cube(String shapeName, double length){
+    public Tetrahedron(String shapeName, double length){
         super(shapeName);
         if (length<=0.0){
             throw new IllegalArgumentException("length should be > 0.0");
@@ -23,16 +23,16 @@ public class Cube extends ThreeDimensionalShape{
 
     @Override
     public double getArea() {
-        return 6*(Math.pow(length, 2));
+        return (Math.pow(3, 1.0/2))*(Math.pow(length,2));
     }
 
     @Override
     public double getVolume() {
-        return Math.pow(length, 3);
+        return (Math.pow(length, 3))/((6)*Math.pow(2.0, 1.0/2));
     }
 
     @Override
     public String toString() {
-        return String.format("%s%s: %.2f%n%s: %.2f%n%s: %.2f%n",super.toString(), "side length", getLength(), "Area", getArea(), "Volume", getVolume());
+        return String.format("%s%s: %.2f%n%s: %.2f%n%s: %.2f%n",super.toString(), "Length", getLength(), "Area", getArea(), "Volume", getVolume());
     }
 }

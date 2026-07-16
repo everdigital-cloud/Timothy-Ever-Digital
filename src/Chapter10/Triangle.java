@@ -39,13 +39,13 @@ public class Triangle extends TwoDimensionalShape{
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return (getBase()/2)* getHight() ;
     }
 
     @Override
     public String toString() {
-        return String.format("%s%s: %.2f%n%s: %.2f%n%s: %.2f%n", super.toString(),"Base: ", getBase(),"Hight: ", getHight(),"Area " ,area());
+        return String.format("%s%s: %.2f%n%s: %.2f%n%s: %.2f%n", super.toString(),"Base: ", getBase(),"Hight: ", getHight(),"Area " , getArea());
     }
 }
 

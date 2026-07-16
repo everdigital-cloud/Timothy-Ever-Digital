@@ -38,12 +38,12 @@ public class Square extends TwoDimensionalShape{
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return getLength()*getWidth() ;
     }
 
     @Override
     public String toString() {
-        return String.format("%s%s: %.2f%n%s: %.2f%n%s: %.2f%n", super.toString(),"Length ", getLength(),"Width ", getWidth(),"Area " ,area());
+        return String.format("%s%s: %.2f%n%s: %.2f%n%s: %.2f%n", super.toString(),"Length ", getLength(),"Width ", getWidth(),"Area " , getArea());
     }
 }

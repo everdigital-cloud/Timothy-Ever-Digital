@@ -10,7 +10,7 @@ information about it at en.wikipedia.org/wiki/Euclidean_algorithm.] Incorporate 
 into an application that reads two values from the user and displays the result.
          */
 
-        gcd(144,180);
+        gcd(4,12);
         //if (gcd(number1,number2)==1) {
             //System.out.println( number1 * number2);
        // }

@@ -12,7 +12,8 @@ public class Employee {
       System.out.printf("Employee constructor: %s %s; count = %d%n", firstName, lastName, count);
 
   }
-  public String getFirstName(){
+
+    public String getFirstName(){
       return firstName;
   }
   public String getLastName(){
